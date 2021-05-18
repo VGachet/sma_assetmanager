@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:text="Toggle Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ToggleButton
+        android:id="@+id/toggle_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:textOff=""
+        android:textOn="" />
+
+    <TextView
+        android:text="Image Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/image_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp" />
+
+
+</LinearLayout>

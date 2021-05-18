@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.smartapps.lib">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <meta-data
+            android:name="fr.smartapps.lib.glide.SMAGlideModule"
+            android:value="GlideModule" />
+
+        <!-- http://sapandiwakar.in/how-to-set-up-android-app-to-support-expansion-files/ -->
+        <!--<service android:name=".expansion.DownloaderService"/>
+        <receiver android:name=".expansion.DownloaderServiceBroadcastReceiver" />-->
+
+    </application>
+
+</manifest>

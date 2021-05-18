@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loaded from assets :"
+        android:layout_margin="15dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/toggle_button1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loaded from external public :"
+        android:layout_margin="15dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/toggle_button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar2"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loaded from external private :"
+        android:layout_margin="15dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/toggle_button3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar3"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loaded from obb :"
+        android:layout_margin="15dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/toggle_button4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar4"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
