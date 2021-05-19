@@ -1,12 +1,15 @@
 buildscript {
+    ext.kotlin_version = '1.4.32'
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
-        // deploy to maven repository
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -14,8 +17,13 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url "https://jitpack.io" }
         maven {
-            url 'https://dl.bintray.com/smartapps/maven'
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        flatDir {
+            dirs project(':lib_smaassetmanager').file('libs')
         }
     }
 }

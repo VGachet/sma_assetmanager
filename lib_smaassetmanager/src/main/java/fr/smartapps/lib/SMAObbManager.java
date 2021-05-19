@@ -3,11 +3,10 @@ package fr.smartapps.lib;
 import android.content.Context;
 import android.util.Log;
 
-import com.android.vending.expansion.zipfile.APKExpansionSupport;
-import com.android.vending.expansion.zipfile.ZipResourceFile;
-import com.google.android.vending.expansion.downloader.Helpers;
-
 import java.io.IOException;
+
+import fr.smartapps.lib.zip.APKExpansionSupport;
+import fr.smartapps.lib.zip.ZipResourceFile;
 
 /**
  * Created by vchann on 12/08/2016.
@@ -24,20 +23,6 @@ public class SMAObbManager {
 
     public SMAObbManager(Context context) {
         this.context = context;
-    }
-
-    public boolean isOBBDelivered() {
-        String mainFilename = Helpers.getExpansionAPKFileName(context, true, OBB_MAIN_VERSION);
-        String patchFilename = Helpers.getExpansionAPKFileName(context, false, OBB_PATCH_VERSION);
-
-        if (mainFilename != null && !Helpers.doesFileExist(context, mainFilename, OBB_MAIN_FILE_SIZE, false)) {
-            return false;
-        }
-
-        if (patchFilename != null && !Helpers.doesFileExist(context, patchFilename,OBB_PATCH_FILE_SIZE, false)) {
-            return false;
-        }
-        return true;
     }
 
     public void initMainOBB(int version, int fileSize) {
