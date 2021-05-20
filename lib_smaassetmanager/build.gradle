@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.github.dcendents.android-maven'
 group = "com.github.VGachet"
 
 android {
@@ -31,3 +30,10 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+ext {
+    pomVersion = '1.0.31'
+    pomGroupID = "com.github.vgachet"
+}
+
+apply from: '../maven.gradle'
