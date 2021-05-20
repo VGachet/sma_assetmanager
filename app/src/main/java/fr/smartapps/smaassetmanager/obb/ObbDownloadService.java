@@ -1,6 +1,6 @@
 package fr.smartapps.smaassetmanager.obb;
 
-import com.google.android.vending.expansion.downloader.impl.DownloaderService;
+//import com.google.android.vending.expansion.downloader.impl.DownloaderService;
 
 /**
  * The DownloaderService handles the downloading of expansion files from the Play Store and informs about the the progress to subscribing activities.
@@ -8,9 +8,9 @@ import com.google.android.vending.expansion.downloader.impl.DownloaderService;
  *
  * You must update the BASE64_PUBLIC_KEY value to be the public key belonging to your publisher account.
  */
-public class ObbDownloadService extends DownloaderService {
+public class ObbDownloadService /*extends DownloaderService*/ {
 
-    String PUBLIC_KEY = "";
+/*    String PUBLIC_KEY = "";
 
     // You must use the public key belonging to your publisher account
     // You should also modify this salt
@@ -31,5 +31,5 @@ public class ObbDownloadService extends DownloaderService {
     @Override
     public String getAlarmReceiverClassName() {
         return ObbBroadcastReceiver.class.getName();
-    }
+    }*/
 }

@@ -28,7 +28,6 @@ dependencies {
     api 'commons-io:commons-io:2.4'
     api 'com.github.bumptech.glide:glide:3.7.0'
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    api(name: 'downloader_library', ext: 'aar')
 }
 
 repositories {
@@ -43,7 +42,7 @@ afterEvaluate {
 
                 groupId = 'com.github.VGachet'
                 artifactId = 'sma_assetmanager'
-                version = '1.0.35'
+                version = '1.0.36'
 
                 pom {
                     packaging 'aar'

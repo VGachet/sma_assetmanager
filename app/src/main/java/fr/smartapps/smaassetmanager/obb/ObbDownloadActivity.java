@@ -12,13 +12,13 @@ import android.os.Messenger;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
-import com.google.android.vending.expansion.downloader.DownloadProgressInfo;
-import com.google.android.vending.expansion.downloader.DownloaderClientMarshaller;
-import com.google.android.vending.expansion.downloader.DownloaderServiceMarshaller;
-import com.google.android.vending.expansion.downloader.IDownloaderClient;
-import com.google.android.vending.expansion.downloader.IDownloaderService;
-import com.google.android.vending.expansion.downloader.IStub;
-import com.google.android.vending.expansion.downloader.impl.DownloaderService;
+//import com.google.android.vending.expansion.downloader.DownloadProgressInfo;
+//import com.google.android.vending.expansion.downloader.DownloaderClientMarshaller;
+//import com.google.android.vending.expansion.downloader.DownloaderServiceMarshaller;
+//import com.google.android.vending.expansion.downloader.IDownloaderClient;
+//import com.google.android.vending.expansion.downloader.IDownloaderService;
+//import com.google.android.vending.expansion.downloader.IStub;
+//import com.google.android.vending.expansion.downloader.impl.DownloaderService;
 
 import java.util.Set;
 
@@ -31,9 +31,9 @@ import java.util.Set;
  * => log "Try download expansion file"
  * => process start to download OBB
  */
-public abstract class ObbDownloadActivity extends Activity implements IDownloaderClient {
+public abstract class ObbDownloadActivity extends Activity /*implements IDownloaderClient*/ {
 
-    private String TAG = "ObbDownloadActivity";
+    /*private String TAG = "ObbDownloadActivity";
 
     // obb
     static int obb_size = 0;
@@ -51,7 +51,7 @@ public abstract class ObbDownloadActivity extends Activity implements IDownloade
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-/*        // OBB config
+*//*        // OBB config
         obb_size = getResources().getInteger(R.integer.config_expansion_file_main_size);
         obb_version = getResources().getInteger(R.integer.config_expansion_file_main_version);
 
@@ -62,7 +62,7 @@ public abstract class ObbDownloadActivity extends Activity implements IDownloade
         }
         else {
             Log.d(TAG, "Expansion files delivered");
-        }*/
+        }*//*
     }
 
     @Override
@@ -72,9 +72,9 @@ public abstract class ObbDownloadActivity extends Activity implements IDownloade
             mExpansionFilesDownloaderClientStub.connect(this);
         }
 
-/*        if (null != mDownloadExpansionFilesDialog && mDownloadExpansionFilesDialog.isShowing() && expansionFilesDelivered()) {
+*//*        if (null != mDownloadExpansionFilesDialog && mDownloadExpansionFilesDialog.isShowing() && expansionFilesDelivered()) {
             dismissDialog(DIALOG_DOWNLOAD_EXPANSION_FILES);
-        }*/
+        }*//*
 
     }
 
@@ -164,7 +164,7 @@ public abstract class ObbDownloadActivity extends Activity implements IDownloade
         }
     }
 
-/*    boolean expansionFilesDelivered() {
+*//*    boolean expansionFilesDelivered() {
         String mainFilename = getResources().getBoolean(R.bool.config_expansion_file_needs_main) ? Helpers.getExpansionAPKFileName(this, true, getResources().getInteger(R.integer.config_expansion_file_main_version)) : null;
         String patchFilename = getResources().getBoolean(R.bool.config_expansion_file_needs_patch) ? Helpers.getExpansionAPKFileName(this, false, getResources().getInteger(R.integer.config_expansion_file_patch_version)) : null;
 
@@ -176,7 +176,7 @@ public abstract class ObbDownloadActivity extends Activity implements IDownloade
             return false;
         }
         return true;
-    }*/
+    }*//*
 
     private void tryDownloadExpansionFiles() {
 
@@ -228,6 +228,6 @@ public abstract class ObbDownloadActivity extends Activity implements IDownloade
                 intent.addCategory(category);
             }
         }
-    }
+    }*/
 
 }
