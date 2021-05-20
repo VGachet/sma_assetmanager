@@ -4,6 +4,8 @@ plugins {
     id 'maven-publish'
 }
 
+group = publishedgroupid
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -41,7 +43,38 @@ afterEvaluate {
 
                 groupId = 'com.github.VGachet'
                 artifactId = 'sma_assetmanager'
-                version = '1.0.34'
+                version = '1.0.35'
+
+                pom {
+                    packaging 'aar'
+                    groupId 'com.github.VGachet'
+                    artifactId 'sma_assetmanager'
+
+                    // Add your description here
+                    name = 'sma_assetmanager'
+                    description = 'Smartapps asset manager library'
+                    url = 'https://smartapps.fr/'
+
+                    // Set your license
+                    licenses {
+                        license {
+                            name = 'The Apache Software License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'smartapps'
+                            name = 'Smartapps'
+                            email = 'dd@smartapps.fr'
+                        }
+                    }
+                    scm {
+                        connection = 'https://github.com/smartguide.git'
+                        developerConnection = 'https://github.com/smartguide.git'
+                        url = 'https://github.com/smartguide.git'
+                    }
+                }
             }
         }
     }
