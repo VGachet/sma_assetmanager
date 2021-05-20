@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'maven-publish'
 }
-group = "com.github.vgachet"
 
 android {
     compileSdkVersion 30
@@ -39,31 +38,10 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.vgachet'
+
+                groupId = 'com.github.VGachet'
                 artifactId = 'sma_assetmanager'
-                version = '1.0.33'
-
-                //The publication doesn't know about our dependencies, so we have to manually add them to the pom
-                pom.withXml {
-                    // for dependencies and exclusions
-                    def dependenciesNode = asNode().appendNode('dependencies')
-                    configurations.implementation.allDependencies.withType(ModuleDependency) { ModuleDependency dp ->
-                        def dependencyNode = dependenciesNode.appendNode('dependency')
-                        dependencyNode.appendNode('groupId', dp.group)
-                        dependencyNode.appendNode('artifactId', dp.name)
-                        dependencyNode.appendNode('version', dp.version)
-
-                        // for exclusions
-                        if (dp.excludeRules.size() > 0) {
-                            def exclusions = dependencyNode.appendNode('exclusions')
-                            dp.excludeRules.each { ExcludeRule ex ->
-                                def exclusion = exclusions.appendNode('exclusion')
-                                exclusion.appendNode('groupId', ex.group)
-                                exclusion.appendNode('artifactId', ex.module)
-                            }
-                        }
-                    }
-                }
+                version = '1.0.34'
             }
         }
     }

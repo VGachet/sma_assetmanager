@@ -24,7 +24,6 @@ allprojects {
         flatDir {
             dirs project(':lib_smaassetmanager').file('libs')
         }
-        maven { url "https://jitpack.io" }
     }
 }
 
